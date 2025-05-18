@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan [Nama Pria] & [Nama Wanita]</title>
+    <style>
+  body {
+    background-image: url('wayang.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Sesuaikan warna teks agar tetap terbaca */
+  }
+    </style>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8; /* Light background */
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation */
+        }
+
+        .container {
+            max-width: 600px; /* Max width for mobile view */
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #fff; /* White background for content area */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Needed for navigation bar */
+            padding-bottom: 70px; /* Space for fixed navigation */
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+            min-height: 100vh; /* Make sections at least full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Background and color theme inspired by uploaded images */
+        .theme-background {
+             /* Using a gradient or placeholder for complex background */
+            background: linear-gradient(to bottom, #8b0000, #b22222); /* Dark red gradient */
+            color: #fff;
+        }
+
+        .theme-text-color {
+            color: #ffd700; /* Gold color for accents */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Georgia', serif; /* Serif font for headings */
+            color: #ffd700; /* Gold color for headings */
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ffd700; /* Gold button */
+            color: #8b0000; /* Dark red text */
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ffcc00; /* Lighter gold on hover */
+        }
+
+        /* Section Specific Styles */
+        #cover {
+            background-image: url('[4371939.jpg]'); /* Replace with your cover image */
+            color: #fff;
+        }
+
+        #cover h1 {
+             font-size: 2.5em;
+             margin-bottom: 5px;
+        }
+
+        #cover p {
+            font-size: 1.2em;
+        }
+
+        #mempelai .photo-frame {
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ffd700;
+        }
+
+        #mempelai .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #mempelai .parents-info {
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        #quotes {
+            background-image: url('[4371939_quotes.jpg]'); /* Optional background */
+            background-color: #8b0000; /* Fallback color */
+            color: #fff;
+        }
+
+        #quotes .quote-text {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        #gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #gallery .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 2px solid #ffd700;
+        }
+
+        #acara .event-details {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px dashed #ffd700;
+            border-radius: 10px;
+        }
+
+        #acara .event-details h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        #acara .venue-photo {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            border: 3px solid #ffd700;
+        }
+
+        #maps .map-container {
+            width: 100%;
+            max-width: 500px;
+            height: 300px; /* Adjust height as needed */
+            background-color: #eee; /* Placeholder background */
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #ffd700;
+        }
+
+        #maps .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        #rsvp .countdown {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        #rsvp .rsvp-form {
+            margin-top: 20px;
+            /* Add form elements here (input for name, confirmation, message) */
+        }
+
+        #gift .bank-info {
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ffd700;
+            margin-top: 20px;
+        }
+
+        #gift .bank-info p {
+            margin: 5px 0;
+        }
+
+        #gift .copy-button {
+            background-color: #8b0000;
+            color: #fff;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #gift .copy-button:hover {
+            background-color: #a52a2a;
+        }
+
+
+        /* Fixed Bottom Navigation */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #8b0000; /* Dark red background */
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        .bottom-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.8em;
+            text-align: center;
+            padding: 5px;
+            flex-grow: 1; /* Distribute space evenly */
+        }
+
+        .bottom-nav a:hover {
+            color: #ffd700; /* Gold on hover */
+        }
+
+        /* Responsive Adjustments */
+        @media (min-width: 600px) {
+            .container {
+                max-width: 800px; /* Wider container on larger screens */
+            }
+
+            .bottom-nav a {
+                font-size: 1em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section id="cover" class="theme-background">
+            <h1>The Wedding Of</h1>
+            <h1><span class="theme-text-color">W</span>&<span class="theme-text-color">D</span></h1>
+            <h2><span class="theme-text-color">[Nama Pria]</span> & <span class="theme-text-color">[Nama Wanita]</span></h2>
+            <p>[Tanggal Acara]</p>
+            <a href="#mempelai" class="button">Opening</a>
+        </section>
+
+        <section id="mempelai">
+            <h2>Mempelai</h2>
+            <div class="photo-frame">
+                 <img src="[ganti_dengan_foto_couple.jpg]" alt="Foto Couple">
+            </div>
+            <h3>[Nama Lengkap Pria]</h3>
+            <p>Putra dari <br/> [Nama Ayah Pria] dan [Nama Ibu Pria]</p>
+
+            <div class="photo-frame">
+                 <img src="[ganti_dengan_foto_couple_2.jpg]" alt="Foto Couple">
+            </div>
+            <h3>[Nama Lengkap Wanita]</h3>
+            <p>Putri dari <br/> [Nama Ayah Wanita] dan [Nama Ibu Wanita]</p>
+        </section>
+
+        <section id="quotes" class="theme-background">
+            <h2>Do'a Untuk Pengantin</h2>
+             <p class="quote-text">
+                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+            </p>
+            <p>QS. Ar-Rum '21</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Galeri</h2>
+            <div class="gallery-grid">
+                <img src="[ganti_dengan_foto_galeri_1.jpg]" alt="Foto Pernikahan 1">
+                <img src="[ganti_dengan_foto_galeri_2.jpg]" alt="Foto Pernikahan 2">
+                <img src="[ganti_dengan_foto_galeri_3.jpg]" alt="Foto Pernikahan 3">
+                <img src="[ganti_dengan_foto_galeri_4.jpg]" alt="Foto Pernikahan 4">
+                <img src="[ganti_dengan_foto_galeri_5.jpg]" alt="Foto Pernikahan 5">
+                <img src="[ganti_dengan_foto_galeri_6.jpg]" alt="Foto Pernikahan 6">
+                </div>
+        </section>
+
+        <section id="acara" class="theme-background">
+            <h2>Acara</h2>
+
+            <div class="event-details">
+                <h3>Akad Nikah</h3>
+                <p>[Hari], [Tanggal] [Bulan] [Tahun]</p>
+                <p>Pukul [Jam] WIB - Selesai</p>
+                <p>[Lokasi Akad]</p>
+            </div>
+
+            <div class="event-details">
+                <h3>Resepsi Pernikahan</h3>
+                 <p>[Hari], [Tanggal] [Bulan] [Tahun]</p>
+                <p>Pukul [Jam] WIB - Selesai</p>
+                <p>[Nama Tempat Resepsi]<br/>[Alamat Lengkap Resepsi]</p>
+            </div>
+
+             <img src="[ganti_dengan_foto_venue.jpg]" alt="Foto Venue Acara" class="venue-photo">
+
+        </section>
+
+        <section id="maps">
+            <h2>Lokasi Acara</h2>
+            <p>[Alamat Lengkap Resepsi]</p>
+            <div class="map-container">
+                <iframe src="[URL_Maps_EMBED]" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <a href="[URL_Maps_DIRECTION]" target="_blank" class="button">Petunjuk Ke Lokasi</a>
+            </section>
+
+        <section id="rsvp" class="theme-background">
+            <h2>Do'a Untuk Pengantin</h2>
+            <p>Hitung Mundur Acara:</p>
+            <div class="countdown" id="countdown">
+                Hari Jam Menit Detik
+            </div>
+            <p>Tekan tombol dibawah ini untuk mengirim ucapan dan konfirmasi kehadiran</p>
+            <a href="[LINK_KE_FORM_RSVP_ATAU_WA]" class="button">Konfirmasi & Kirim Ucapan</a>
+             <p style="margin-top: 20px;">Harap Konfirmasi Sebelum [Tanggal RSVP]</p>
+
+             </section>
+
+        <section id="gift">
+            <h2>Wedding Gift</h2>
+            <p>Terima kasih telah menambah semangat kegembiraan pernikahan kami dengan kehadiran dan hadiah indah Anda.</p>
+            <div class="bank-info">
+                <p><strong>BANK [Nama Bank]</strong></p>
+                <p>Nomor Rekening: <span id="rekening-number">[Nomor Rekening]</span></p>
+                <button class="copy-button" onclick="copyToClipboard('rekening-number')">Salin Rekening</button>
+                <p>Atas Nama: [Nama Pemilik Rekening]</p>
+            </div>
+             <a href="[LINK_KE_FORM_KONFIRMASI_TRANSFER_ATAU_WA]" class="button">Konfirmasi Bukti Transfer</a>
+        </section>
+
+        <section id="thanks" class="theme-background">
+            <p>Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan do'a restu kepada kedua mempelai.</p>
+            <p style="margin-top: 30px;">Hormat Kami Yang Mengundang</p>
+            <h2><span class="theme-text-color">[Nama Pria]</span> & <span class="theme-text-color">[Nama Wanita]</span></h2>
+            <p>Musik: [Judul Lagu Pengiring]</p> </section>
+
+    </div> <nav class="bottom-nav">
+        <a href="#cover">Cover</a>
+        <a href="#mempelai">Mempelai</a>
+        <a href="#quotes">Quotes</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#acara">Acara</a>
+        <a href="#maps">Maps</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#gift">Gift</a>
+        <a href="#thanks">Thanks</a>
+    </nav>
+
+    <script>
+        // Basic JavaScript for Copy to Clipboard (Optional)
+        function copyToClipboard(elementId) {
+            var copyText = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(copyText).then(function() {
+                alert("Nomor rekening berhasil disalin: " + copyText);
+            }, function(err) {
+                console.error("Gagal menyalin nomor rekening: ", err);
+            });
+        }
+
+        // Basic Countdown Timer (Requires more complex logic for accurate time)
+        // This is a placeholder. A real countdown needs the event date and time.
+        // Example:
+        /*
+        var countDownDate = new Date("Apr 18, 2025 10:00:00").getTime(); // Set your wedding date and time
+
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("countdown").innerHTML = days + " Hari " + hours + " Jam "
+          + minutes + " Menit " + seconds + " Detik ";
+
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "Acara Telah Dimulai!";
+          }
+        }, 1000);
+        */
+    </script>
+
+</body>
+</html>
